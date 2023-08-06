@@ -1,6 +1,6 @@
 {
   "name": "trim-edge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A minimalistic library designed to trim specific strings from the start or end of an input string. If the specified substring exists at the beginning or the end of the original string, it is removed. Otherwise, the original string is returned as is. Great for path manipulation, query parameters, and custom string manipulation needs.",
   "main": "index.js",
@@ -11,8 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:amscotti/trim-edge.git"
+    "url": "https://github.com/amscotti/trim-edge.git"
   },
+  "keywords": [
+    "strings",
+    "trim",
+    "string manipulation"
+  ],
   "author": "anthony.m.scotti@gmail.com",
   "license": "MIT",
   "devDependencies": {
