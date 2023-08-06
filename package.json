@@ -9,6 +9,10 @@
     "test": "standard && ava",
     "coverage": "c8 --all --reporter=html --reporter=text npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:amscotti/trim-edge.git"
+  },
   "author": "anthony.m.scotti@gmail.com",
   "license": "MIT",
   "devDependencies": {
