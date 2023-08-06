@@ -4,3 +4,4 @@ coverage
 .gitignore
 .npmignore
 .git
+.github
