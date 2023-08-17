@@ -13,12 +13,12 @@ test('should trim from the end when post is true', t => {
 })
 
 test('should trim from both start and end when pre and post are true', t => {
-  const result = trimEdge('/something/', '/', { pre: true, post: true })
+  const result = trimEdge('/something/', '/')
   t.is(result, 'something')
 })
 
 test('should return the original string if target does not exist at start or end', t => {
-  const result = trimEdge('something', '/', { pre: true, post: true })
+  const result = trimEdge('something', '/')
   t.is(result, 'something')
 })
 
@@ -35,7 +35,7 @@ test('should create a trim function that trims from the end', t => {
 })
 
 test('should create a trim function that trims from both start and end', t => {
-  const trimBoth = createTrimEdgeFn('/', { pre: true, post: true })
+  const trimBoth = createTrimEdgeFn('/')
   const result = trimBoth('/something/')
   t.is(result, 'something')
 })
