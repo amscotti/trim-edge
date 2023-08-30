@@ -1,10 +1,14 @@
 {
   "name": "trim-edge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "A minimalistic library designed to trim specific strings from the start or end of an input string. If the specified substring exists at the beginning or the end of the original string, it is removed. Otherwise, the original string is returned as is. Great for path manipulation, query parameters, and custom string manipulation needs.",
   "main": "index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
+    "check": "tsc --noEmit true",
+    "build": "tsc --emitDeclarationOnly true --noEmitOnError",
+    "prepublishOnly": "npm run build",
     "lint": "standard --fix",
     "test": "standard && ava",
     "coverage": "c8 --all --reporter=html --reporter=text npm test"
@@ -24,6 +28,7 @@
     "@fast-check/ava": "^1.1.5",
     "ava": "^5.3.1",
     "c8": "^8.0.1",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2"
   }
 }
