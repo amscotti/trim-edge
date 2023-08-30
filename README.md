@@ -15,19 +15,28 @@ npm install trim-edge
 You can trim a target string from the start, end, or both sides of a given string.
 
 ```js
-import { trimEdge } from 'trim-edge'
+import { trimEdge, OPTIONS } from 'trim-edge'
 
-const result = trimEdge('/something/', '/', { pre: true, post: true })
-console.log(result) // Outputs: "something"
+const resultBoth = trimEdge('/something/', '/') // Same as using OPTIONS.BOTH
+console.log(resultBoth) // Outputs: "something"
+
+const resultPre = trimEdge('/something/', '/', OPTIONS.PRE_ONLY)
+console.log(resultPre) // Outputs: "something/"
+
+const resultPost = trimEdge('/something/', '/', OPTIONS.POST_ONLY)
+console.log(resultPost) // Outputs: "/something"
+
+const resultNone = trimEdge('/something/', '/', OPTIONS.NONE)
+console.log(resultNone) // Outputs: "/something/"
 ```
 
 ### Creating Custom Trimming Functions
 
 ```js
-import { createTrimEdgeFn } from 'trim-edge';
+import { createTrimEdgeFn, OPTIONS } from 'trim-edge';
 
-const trimSlashes = createTrimEdgeFn('/', { pre: true, post: true })
+const trimSlashes = createTrimEdgeFn('/', OPTIONS.PRE_ONLY)
 const result = trimSlashes('/something/')
-console.log(result) // Outputs: "something"
+console.log(result) // Outputs: "something/"
 ```
 
