@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "strict": true,
+        "checkJs": true,
+        "declaration": true,
+        "declarationDir": "types",
+        "lib": ["es2020"],
+    },
+    "include": ["**.js"],
+    "exclude": ["node_modules"]
+}

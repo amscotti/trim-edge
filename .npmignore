@@ -1,7 +1,8 @@
 *.npmrc
-test.js
+*test*
 coverage
 .gitignore
 .npmignore
 .git
 .github
+tsconfig.json
